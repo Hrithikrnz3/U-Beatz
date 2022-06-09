@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/219e94c305.js" crossorigin="anonymous"></script>
+    <title>Index</title>
+    <style>
+
+      .button{
+        display: inline-flex;
+        height: 50px;
+        width:190px;
+        padding: 0;
+        background: #009578;
+        border:none;
+        outline: none;
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .button:hover{
+        background: #008168;
+      }
+      .button:active{
+        background: #006e58;
+      }
+      .button__text,
+      .button__icon{
+        display: inline-flex;
+        align-items: center;
+        padding: 0 24px;
+        color: #fff;
+        height:100%;
+      }
+      .button__icon{
+        font-size: 1.5em;
+        background: rgba(0,0,0,0.08);
+      }
+      .heading h1{
+      color:#0D2137;
+      }
+      .heading span {
+      color: #F4B41A;
+      }
+
+    </style>
+</head>
+  <body>
+
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: #14213d;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">U-Beatz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <h1 class="heading"  align="center">Welcome to U-Beatz,<span c>  Choose Platform</span></h1>
+    <br><br>
+    <div class="container" align="center">
+      <div class="vertical-center">
+      <a href={{url_for('youtube')}} style="text-decoration:none">
+      <button type="button" class="button">
+        <span class="button__icon">
+          <i class="fa-brands fa-youtube"></i>
+        </span>
+        <span class="button__text">Youtube</span>
+      </button>
+      </a>
+        <br>
+        <br>
+      <br>
+      <a href={{url_for('song_recommend')}} style="text-decoration:none">
+      <button type="button" class="button">
+        <span class="button__icon">
+          <i class="fa-brands fa-spotify"></i>
+        </span>
+        <span class="button__text">Spotify</span>
+      </button>
+      </a>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
+

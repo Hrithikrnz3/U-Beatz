@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<title>music recommend</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<Body >
+<nav class="navbar navbar-expand-lg" style="background-color: #14213d;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">U-Beatz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<font face="Bradley Hand ITC" size="20px" color="neon" >U-Beatz</font>
+	<div class="title">
+		<font face="Bradley Hand ITC" size="20px" color="neon">Make all your moods musical</font>
+	</div>
+
+	<form action="{{url_for('choose_singer')}}" method="POST">
+		<label><input type="radio" name="language" value="Malayalam" checked="true"><div class="box">MOLLYWOOD</div></label>
+<label><input type="radio" name="language" value="Tamil" checked="true"><div class="box">KOLLYWOOD</div></label>
+		<br>
+		<label><input type="radio" name="language" value="hindi"><div class="box">BOLLYWOOD</div></label>
+		<label><input type="radio" name="language" value="western"><div class="box">HOLLYWOOD</div></label>
+
+		<br>
+		<input type="submit" name="btn" value="next" class="btn btn-outline-success btn-lg">
+
+	</form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+</body>
+</html>
